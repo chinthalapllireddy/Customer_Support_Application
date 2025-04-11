@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create New Agent</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Create New Agent Account</h2>
+    <form action="/create_agent" method="post">
+      <input type="text" name="username" placeholder="Agent Username" required>
+      <input type="password" name="password" placeholder="Agent Password" required>
+      <button type="submit">Create Agent</button>
+    </form>
+    <a href="/dashboard_admin">← Back to Dashboard</a>
+  </div>
+</body>
+</html>

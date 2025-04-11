@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="admin-dashboard">
+    <h2>Superadmin Dashboard</h2>
+    <p>Welcome, {{ session.admin }}</p>
+    
+    <!-- Link to Create Agent page -->
+    <a href="/create_agent" class="btn-link">Create New Agent</a>
+    
+    <div class="stats">
+      <div class="stat-card">
+        <h3>Online Agents</h3>
+        <p id="agent-count">3</p>
+      </div>
+      <div class="stat-card">
+        <h3>Active Chats</h3>
+        <p id="chat-count">7</p>
+      </div>
+      <div class="stat-card">
+        <h3>Registered Users</h3>
+        <p id="user-count">154</p>
+      </div>
+    </div>
+    
+    <button onclick="location.href='/'">Logout</button>
+  </div>
+  <script src="/static/admin_dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1a73e8;
+    padding: 1rem 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar h1 {
+    font-size: 1.5rem;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #fff;
+}
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.hero button {
+    padding: 0.8rem 1.5rem;
+    background-color: #1a73e8;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hero button:hover {
+    background-color: #1558b0;
+}
+
+/* Info Sections (About/Contact) */
+.info-section {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #1a73e8;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Login Container */
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 5rem auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.login-container h2 {
+    margin-bottom: 1rem;
+}
+.login-container input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-container button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.login-container button:hover {
+    background-color: #1558b0;
+}
+.login-container a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #1a73e8;
+}
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+    width: 90%;
+    max-width: 800px;
+    margin: 3rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.admin-dashboard .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+.stat-card {
+    padding: 1rem;
+    background: #f4f4f4;
+    border-radius: 5px;
+    width: 30%;
+}
+.btn-link {
+    padding: 0.5rem 1rem;
+    background-color: #1a73e8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.chat-container header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.chat-box {
+    height: 300px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    overflow-y: scroll;
+}
+.chat-message {
+    margin-bottom: 0.5rem;
+}
