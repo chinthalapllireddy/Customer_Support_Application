@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="admin-dashboard">
     <h2>Superadmin Dashboard</h2>
     <p>Welcome, {{ session.admin }}</p>
     
-    <!-- Link to Create Agent page -->
     <a href="/create_agent" class="btn-link">Create New Agent</a>
     
     <div class="stats">
@@ -27,6 +27,9 @@
         <p id="user-count">154</p>
       </div>
     </div>
+    
+    <!-- Chart to display chat counts by agent -->
+    <canvas id="agentChart" width="400" height="200"></canvas>
     
     <button onclick="location.href='/'">Logout</button>
   </div>

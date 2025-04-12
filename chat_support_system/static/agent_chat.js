@@ -3,7 +3,7 @@ document.getElementById("agent-chat-form").addEventListener("submit", function (
     const messageInput = document.getElementById("agent-message");
     const message = messageInput.value.trim();
     if (message) {
-      appendMessage("Agent", message);
+      appendMessage(document.querySelector("header h2").textContent, message);
       sendMessageToServer("agent", message);
       messageInput.value = "";
     }
@@ -36,4 +36,4 @@ document.getElementById("agent-chat-form").addEventListener("submit", function (
         data.forEach(msg => appendMessage(msg.sender, msg.text));
       });
   }
-      
+  

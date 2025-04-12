@@ -26,7 +26,6 @@ document.getElementById("user-chat-form").addEventListener("submit", function (e
     });
   }
   
-  // Optionally poll for new messages every second
   setInterval(fetchMessages, 1000);
   
   function fetchMessages() {

@@ -8,7 +8,40 @@ function updateDashboard() {
       });
   }
   
-  // Refresh every 5 seconds
-  setInterval(updateDashboard, 5000);
+  function loadChartData() {
+    fetch("/admin/chart_data")
+      .then(res => res.json())
+      .then(data => {
+        const labels = data.map(item => item.agent);
+        const counts = data.map(item => item.chat_count);
+        const ctx = document.getElementById('agentChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Chats Handled by Agent',
+              data: counts,
+              backgroundColor: 'rgba(26, 115, 232, 0.5)',
+              borderColor: 'rgba(26, 115, 232, 1)',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      });
+  }
+  
+  setInterval(() => {
+    updateDashboard();
+    loadChartData();
+  }, 5000);
   updateDashboard();
+  loadChartData();
   

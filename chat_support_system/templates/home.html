@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realtime Chat Support</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realtime Chat Support</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/home_chat.js" defer></script>
 </head>
 <body>
-    <nav class="navbar">
-        <h1>Realtime Support</h1>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="/login_admin">Admin Login</a></li>
-            <li><a href="/login_agent">Agent Login</a></li>
-        </ul>
-    </nav>
+  <!-- Navigation Bar with Chat Button on Top Right -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1>Realtime Support</h1>
+    </div>
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="/login_admin">Admin Login</a>
+      <a href="/login_agent">Agent Login</a>
+      <button id="open-chat-btn" class="chat-toggle-btn">Chat</button>
+    </div>
+  </nav>
 
-    <section class="hero">
-        <h2>Welcome to Realtime Chat Support</h2>
-        <p>Instant support for your customers via real-time messaging</p>
-        <button onclick="location.href='/chat_user'">Start Chatting</button>
-    </section>
+  <!-- Main Content -->
+  <section class="hero">
+      <h2>Welcome to Realtime Chat Support</h2>
+      <p>Instant support for your customers via real-time messaging</p>
+      <button onclick="location.href='/chat_user'">Start Chatting</button>
+  </section>
 
-    <section id="about" class="info-section">
-        <h3>About Us</h3>
-        <p>We provide a real-time chat platform to connect users with support agents instantly. Whether you're a small business or enterprise, our solution helps streamline communication and improve customer satisfaction.</p>
-    </section>
+  <section id="about" class="info-section">
+      <h3>About Us</h3>
+      <p>We provide a real-time chat platform to connect users with support agents instantly. Our solution improves customer satisfaction with streamlined communication.</p>
+  </section>
 
-    <section id="contact" class="info-section">
-        <h3>Contact</h3>
-        <p>Email: support@chatapp.com<br>Phone: +91-9876543210</p>
-    </section>
+  <section id="contact" class="info-section">
+      <h3>Contact</h3>
+      <p>Email: support@chatapp.com<br>Phone: +91-9876543210</p>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Realtime Chat Support. All rights reserved.</p>
-    </footer>
+  <!-- Hidden Chat Box that slides from right side -->
+  <div id="slide-chat" class="slide-chat">
+    <div class="chat-header">
+      <h3>Chat with us</h3>
+      <button id="close-chat-btn">X</button>
+    </div>
+    <div id="slide-chat-box" class="chat-box">
+      <!-- Chat messages will load here -->
+    </div>
+    <form id="slide-chat-form">
+      <input type="text" id="slide-chat-input" placeholder="Type your message..." required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <!-- Footer with Custom Images -->
+  <footer>
+      <img src="https://via.placeholder.com/100?text=Chat" alt="Chat Icon">
+      <p>&copy; 2025 Realtime Chat Support</p>
+  </footer>
 </body>
 </html>
